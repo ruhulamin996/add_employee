@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Add Employee App',
+    
       theme: ThemeData(
+
        appBarTheme: AppBarTheme(
         backgroundColor: Colors.blue,
         centerTitle: true,
@@ -23,6 +25,27 @@ class MyApp extends StatelessWidget {
         )
        ),
 
+       inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5)
+        ),
+        labelStyle: TextStyle(
+          color: Colors.black
+        ),
+        hintStyle: TextStyle(
+          color: Colors.grey
+        )
+       ),
+
+       elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
+       ),
       ),
       home: AddEmployeeScreen(),
     );

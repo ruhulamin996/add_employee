@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class AddEmployeeScreen extends StatelessWidget {
-  AddEmployeeScreen({super.key});
+   AddEmployeeScreen({super.key});
 
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController ageController = TextEditingController();
-  final TextEditingController salaryController = TextEditingController();
-
-
+   TextEditingController nameController = TextEditingController();
+   TextEditingController ageController = TextEditingController();
+   TextEditingController salaryController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Add Employe'),
       ),
@@ -23,24 +23,27 @@ class AddEmployeeScreen extends StatelessWidget {
           children: [
             TextField(
               controller: nameController,
+              keyboardType: TextInputType.text,
               decoration: InputDecoration(
-                labelText: 'Employe Name',
+                labelText: 'Name',
                 hintText: 'Type your name'
               ),
             ),
             SizedBox(height: 10,),
             TextField(
               controller: ageController,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Your Age',
-                hintText: 'Type yoyr age'
+                labelText: 'Age',
+                hintText: 'Type your age'
               ),
             ),
             SizedBox(height: 10,),
             TextField(
               controller: salaryController,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Your Salary',
+                labelText: 'Salary',
                 hintText: 'Type your salary'
               ),
             ),
